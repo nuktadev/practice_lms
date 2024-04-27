@@ -1,6 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Inter:wght@400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+}
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -17,17 +27,28 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: var(--bg, #f9fafc);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+*,
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: theme("borderColor.DEFAULT", currentColor); /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: "";
+}
+
+.ant-menu-title-content {
+  font-size: 14px;
 }
