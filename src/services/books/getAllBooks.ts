@@ -1,16 +1,22 @@
 "use server";
 
-export const getAllBooks = async ({
-  limit,
-}: {
-  limit?: number | undefined;
-}) => {
-  const limitBooks = limit ? limit : 10;
-  const books = await fetch(
-    `https://easy-learning-platform.vercel.app/api/v1/books?limit=${limitBooks}`
+import { TQueryParam } from "@/types/global";
+
+export const getAllBooks = async (args?: any) => {
+  const params = new URLSearchParams();
+
+  if (args) {
+    args.forEach((item: TQueryParam) => {
+      params.append(item.name, item.value as string);
+    });
+  }
+  const courses = await fetch(
+    `https://easy-learning-platform.vercel.app/api/v1/books?${
+      params ? `${params.toString()}` : ""
+    }`
   );
-  const { data } = await books.json();
-  if (books.ok && data) {
+  const { data } = await courses.json();
+  if (courses.ok && data) {
     return data;
   } else {
     return [];

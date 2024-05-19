@@ -1,10 +1,10 @@
 import Books from "@/components/view/Books/Books";
 import React from "react";
 
-const BooksPage = () => {
+const BooksPage = ({ searchParams }: { searchParams: any }) => {
   return (
     <div>
-      <Books />
+      <Books searchParams={searchParams} />
     </div>
   );
 };

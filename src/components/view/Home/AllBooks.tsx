@@ -4,7 +4,7 @@ import { Button } from "antd";
 import Link from "next/link";
 import BooksGrid from "./BooksGrid";
 const AllBooks = async () => {
-  const books = await getAllBooks({ limit: 20 });
+  const books = await getAllBooks([{ name: "limit", value: "10" }]);
   console.log(books);
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">

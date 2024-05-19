@@ -6,7 +6,7 @@ import Link from "next/link";
 import { ArrowRightOutlined } from "@ant-design/icons";
 
 const AllCourses = async () => {
-  const data = await getAllCourses({ limit: 10 });
+  const data = await getAllCourses([{ name: "limit", value: "20" }]);
   const courses = data?.data as ICourse[];
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">

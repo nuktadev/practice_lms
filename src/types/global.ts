@@ -1,3 +1,8 @@
+export type TQueryParam = {
+  name: string;
+  value: boolean | React.Key;
+};
+
 export interface ICourse {
   _id: string;
   title: string;

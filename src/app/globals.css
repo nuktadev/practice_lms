@@ -52,3 +52,21 @@ body {
 .ant-menu-title-content {
   font-size: 14px;
 }
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #d1d1d1;
+  padding: 10px;
+  border-radius: 10px;
+  width: max-content;
+}
+
+.searchbox-input {
+  background-color: transparent;
+  border: none;
+  color: var(--text);
+  outline: none;
+}
