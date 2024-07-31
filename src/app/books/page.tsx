@@ -3,7 +3,7 @@ import React from "react";
 
 const BooksPage = ({ searchParams }: { searchParams: any }) => {
   return (
-    <div>
+    <div className="bg-[#f9f9fa]">
       <Books searchParams={searchParams} />
     </div>
   );

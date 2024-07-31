@@ -18,6 +18,10 @@ const config: Config = {
         mainBlue: "#1464FF",
         mainGray: " #A0A0A0",
       },
+      fontFamily: {
+        bFont: ["Noto Sans Bengali", "sans-serif"],
+        eFont: ["Poppins", "sans-serif"],
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
